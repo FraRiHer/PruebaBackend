@@ -12,13 +12,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/droguerias")
 @CrossOrigin
-public class DrogueriaController { 
+public class DrogueriaController {
     @Autowired
     private DrogueriaService drogueriaService;
 
     @GetMapping
     public List<Drogueria> getAllDroguerias() {
         return drogueriaService.getAllDroguerias();
+    }
+
+    @GetMapping("/search")
+    public List<Drogueria> searchDroguerias(@RequestParam String nombre) {
+        return drogueriaService.findDrogueriasByNombre(nombre);
     }
 
     @GetMapping("/{id}")
@@ -44,4 +49,3 @@ public class DrogueriaController {
         return ResponseEntity.noContent().build();
     }
 }
-

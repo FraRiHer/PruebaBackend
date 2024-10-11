@@ -12,8 +12,17 @@ import java.util.Optional;
 
 @Service
 public class DrogueriaService {
+
     @Autowired
     private DrogueriaRepository drogueriaRepository;
+
+    // Otros métodos...
+
+    // Método para buscar droguerías por nombre
+    public List<Drogueria> findDrogueriasByNombre(String nombre) {
+        return drogueriaRepository.findByNombreContainingIgnoreCase(nombre);
+    }
+
 
     public List<Drogueria> getAllDroguerias() {
         return drogueriaRepository.findAll();
