@@ -25,8 +25,8 @@ public class EmpleadoController {
         return ResponseEntity.ok(empleadoService.findAll());
     }
 
-    @GetMapping("/getByEstablecimientoId/{establecimiento_id}")
-    public List<Empleado> getByEstablecimiento(@PathVariable Long establecimiento_id){
-        return empleadoService.findByEstablecimientoId(establecimiento_id);
+    @GetMapping("/getByEstablecimientoId/{establecimientoId}")
+    public List<Empleado> getByEstablecimiento(@PathVariable Long establecimientoId){
+        return empleadoService.findByEstablecimientoId(establecimientoId);
     }
 }

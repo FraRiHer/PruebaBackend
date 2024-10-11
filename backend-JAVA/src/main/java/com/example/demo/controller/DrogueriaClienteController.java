@@ -18,6 +18,8 @@ import com.example.demo.service.DrogueriaClienteService;
 @RestController
 @RequestMapping("/clientes")
 @CrossOrigin
+
+
 public class DrogueriaClienteController {
     @Autowired
     private DrogueriaClienteService drogueriaClienteService;
