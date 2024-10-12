@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2024 a las 00:28:33
+-- Tiempo de generación: 30-09-2024 a las 23:27:10
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -92,34 +92,7 @@ INSERT INTO `detalle_factura` (`id_detalle`, `cantidad`, `descuento`, `factura_i
 (10, 1, '0.00', 5, 4066, '10225.00'),
 (11, 2, '0.00', 6, 4066, '10225.00'),
 (12, 1, '0.00', 7, 4066, '10225.00'),
-(13, 2, '0.00', 8, 4066, '10225.00'),
-(14, 5, '0.00', 9, 4, '1500.00'),
-(15, 4, '0.00', 10, 4, '1500.00'),
-(16, 3, '0.00', 11, 4, '1500.00'),
-(17, 2, '0.00', 12, 4, '1500.00'),
-(18, 1, '0.00', 13, 4, '1500.00'),
-(19, 2, '0.00', 14, 4, '1500.00'),
-(20, 3, '0.00', 15, 4, '1500.00'),
-(21, 3, '0.00', 16, 4, '1500.00'),
-(22, 2, '0.00', 17, 4, '1500.00'),
-(23, 1, '0.00', 18, 4, '1500.00'),
-(24, 1, '0.00', 19, 4, '1500.00'),
-(25, 2, '0.00', 20, 4, '1500.00'),
-(26, 2, '0.00', 21, 4, '1500.00'),
-(27, 3, '0.00', 22, 4, '1500.00'),
-(28, 2, '0.00', 23, 4, '1500.00'),
-(29, 1, '0.00', 24, 5, '8500.00'),
-(30, 1, '0.00', 25, 4, '1500.00'),
-(31, 1, '0.00', 26, 4, '1500.00'),
-(32, 1, '0.00', 27, 5, '8500.00'),
-(33, 2, '0.00', 28, 4, '1500.00'),
-(34, 1, '0.00', 28, 5, '8500.00'),
-(35, 1, '0.00', 29, 5, '8500.00'),
-(36, 2, '0.00', 29, 4, '1500.00'),
-(37, 2, '0.00', 30, 4, '1500.00'),
-(38, 1, '0.00', 30, 5, '8500.00'),
-(39, 1, '0.00', 31, 4066, '10225.00'),
-(40, 1, '0.00', 31, 5, '8500.00');
+(13, 2, '0.00', 8, 4066, '10225.00');
 
 -- --------------------------------------------------------
 
@@ -236,7 +209,6 @@ CREATE TABLE `empleado` (
 --
 
 INSERT INTO `empleado` (`id`, `apellido`, `bonifica`, `correo`, `fecha_de_nacimiento`, `nombre`, `telefono`, `establecimiento_id`) VALUES
-(100, 'rincon', b'1', 'karen@prueba.com', '2003-07-19', 'karen', '121123213', 2),
 (1111, 'Rincon', b'1', 'franz@prueba.com', '2003-06-20', 'Franz', '12345667', 1),
 (11111111, 'perez', b'1', 'franz@prueba.com', '2003-07-19', 'pepito', '121123213', 2),
 (123456789, 'Prueba', b'0', 'empleado@prueba.com', '2002-02-01', 'Empleado1', '121123213', 1),
@@ -599,30 +571,7 @@ INSERT INTO `factura` (`num_fact`, `fecha`, `total_venta`, `cliente_id`, `emplea
 (5, '2024-09-21', '10225.00', 1, 1015993351, 2, 1),
 (6, '2024-09-21', '20450.00', 1, 1015993351, 2, 1),
 (7, '2024-09-21', '10225.00', 1, 1015993351, 2, 1),
-(8, '2024-09-21', '20450.00', 1, 1015993351, 2, 1),
-(9, '2024-10-04', '7500.00', 1, 1015993351, 2, 1),
-(10, '2024-10-04', '6000.00', 1, 1015993351, 2, 1),
-(11, '2024-10-04', '4500.00', 1, 1015993351, 2, 1),
-(12, '2024-10-04', '3000.00', 1, 1015993351, 2, 1),
-(13, '2024-10-04', '1500.00', 1, 1015993351, 2, 1),
-(14, '2024-10-04', '3000.00', 1, 1015993351, 2, 1),
-(15, '2024-10-04', '4500.00', 1, 1015993351, 2, 1),
-(16, '2024-10-04', '4500.00', 1, 1015993351, 2, 1),
-(17, '2024-10-04', '3000.00', 1, 1015993351, 2, 1),
-(18, '2024-10-04', '1500.00', 1, 1015993351, 2, 1),
-(19, '2024-10-04', '1500.00', 1, 1015993351, 2, 1),
-(20, '2024-10-04', '3000.00', 1, 1015993351, 2, 1),
-(21, '2024-10-04', '3000.00', 1, 1015993351, 2, 1),
-(22, '2024-10-04', '4500.00', 1, 1015993351, 2, 1),
-(23, '2024-10-07', '3000.00', 1, 1015993351, 2, 1),
-(24, '2024-10-07', '8500.00', 1, 1015993351, 2, 1),
-(25, '2024-10-07', '1500.00', 1, 1015993351, 2, 1),
-(26, '2024-10-07', '1500.00', 1, 1015993351, 2, 1),
-(27, '2024-10-07', '8500.00', 1, 1015993351, 2, 1),
-(28, '2024-10-07', '11500.00', 1, 1015993351, 2, 1),
-(29, '2024-10-07', '11500.00', 1, 1015993351, 2, 1),
-(30, '2024-10-07', '11500.00', 1, 100, 2, 1),
-(31, '2024-10-07', '18725.00', 1, 100, 2, 1);
+(8, '2024-09-21', '20450.00', 1, 1015993351, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -680,16 +629,16 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id`, `cantidad`, `ubicacion`, `cod_producto`, `establecimiento_id`, `precio_venta`, `can_bliste`, `can_unidad`, `precio_venta_blis`, `precio_venta_unid`) VALUES
-(59, 21, 'sin actualizar', 5, 2, '8500.00', 0, 0, NULL, NULL),
-(60, 56, 'Vitrina P', 4, 2, '1500.00', 0, 0, NULL, NULL),
-(61, 29, 'sin actualizar', 4066, 2, '10225.00', 0, 0, NULL, NULL),
+(59, 27, 'sin actualizar', 5, 2, '8500.00', 0, 0, NULL, NULL),
+(60, 100, 'Vitrina P', 4, 2, '1500.00', 0, 0, NULL, NULL),
+(61, 30, 'sin actualizar', 4066, 2, '10225.00', 0, 0, NULL, NULL),
 (62, 9, 'sin actualizar', 2273, 2, '17237.00', 0, 0, NULL, NULL),
 (63, 18, 'sin actualizar', 87, 2, '4000.00', 0, 0, NULL, NULL),
 (64, 18, 'sin actualizar', 351, 2, '7500.00', 0, 0, NULL, NULL),
 (65, 6, 'sin actualizar', 723, 2, '10500.00', 0, 0, NULL, NULL),
 (66, 0, 'Sin actualizar', 981, 1, '13000.00', 0, 0, NULL, NULL),
 (67, 0, 'Bodega 4', 62, 2, '5000.00', 0, 0, NULL, NULL),
-(68, 5, 'sin actualizar', 31, 1, '9436.00', 0, 0, NULL, NULL),
+(68, 5, 'sin actualizar', 31, NULL, '9436.00', 0, 0, NULL, NULL),
 (69, 20, 'Sin actualizar', 220, 2, '5000.00', 0, 0, NULL, NULL),
 (74, 0, 'Sin actualizar', 830, 2, '8000.00', 0, 0, NULL, NULL),
 (75, 11, 'Sin actualizar', 1401, 2, '12000.00', 0, 0, NULL, NULL),
@@ -807,7 +756,7 @@ CREATE TABLE `producto` (
 
 INSERT INTO `producto` (`cod_producto`, `cod_barr`, `iva`, `nombre`, `grupo_id`, `presentacion`, `fabricante_id`, `lim_blister_cj`, `lim_uni_blister`, `lim_unidad_cj`) VALUES
 (3, '7707200900040', '0.00', 'CATALAC 150 MG/5ML JBE 90 ML ICOM', NULL, 'FCO', 'H93', 0, 0, 0),
-(4, '7706569020659', '0.00', 'ACETAMINOFEN 500MG 100 TABLETAS AG', NULL, 'UN', 'E22', 0, 0, 0),
+(4, '7706569020659', '0.00', 'OBS. ACETAMINOFEN 500MG 100 TABLETAS AG', NULL, 'UN', 'E22', 0, 0, 0),
 (5, '7501125184277', '0.00', 'ELECTROLIT HIDRATANTE MORA AZUL 625 ML', NULL, 'UN', 'K72', 0, 0, 0),
 (28, '7501125176548', '0.00', 'ELECTROLIT HIDRATANTE UVA 625 ML', NULL, 'FCO', 'K72', 0, 0, 0),
 (29, '7501125176531', '0.00', 'ELECTROLIT HIDRATANTE FRESA KIWI 625 ML', NULL, 'FCO', 'K72', 0, 0, 0),
@@ -13409,7 +13358,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `detalle_factura`
 --
 ALTER TABLE `detalle_factura`
-  MODIFY `id_detalle` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_detalle` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
@@ -13439,7 +13388,7 @@ ALTER TABLE `establecimiento`
 -- AUTO_INCREMENT de la tabla `factura`
 --
 ALTER TABLE `factura`
-  MODIFY `num_fact` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `num_fact` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
