@@ -59,7 +59,7 @@ public class EstablecimientoController {
     }
 
     @GetMapping("/getDrogueria/{id}")
-    public Drogueria getDrogueria(@PathVariable Long id){
+    public Long getDrogueria(@PathVariable Long id){
         return establecimientoService.getDrogueria(id);
     }
 

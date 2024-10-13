@@ -47,10 +47,10 @@ public class EstablecimientoService {
     }
 
     @Transactional
-    public Drogueria getDrogueria(Long id){
+    public Long getDrogueria(Long id){
         Establecimiento establecimiento = establecimientoRepository.findById(id)
         .orElseThrow(() -> new RuntimeException("Establecimiento not found"));
-        return establecimiento.getDrogueria();
+        return establecimiento.getDrogueria().getId();
     }
 }
 
