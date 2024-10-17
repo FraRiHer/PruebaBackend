@@ -3,8 +3,6 @@ package com.example.demo.service;
 import java.util.List;
 import java.util.Optional;
 
-import javax.management.RuntimeMBeanException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,10 +23,8 @@ public class InventarioService {
 
     @Autowired
     private ProductoRepository productoRepository;
-
-    @Autowired
+    @Autowired 
     private EstablecimientoRepository establecimientoRepository;
-
     @Transactional
     public void createOrUpdateInventory(Inventario inventarioDTO, Long establecimientoId) {
         // Verifica si el establecimiento existe
@@ -48,6 +44,7 @@ public class InventarioService {
             Inventario inventario = inventarioExistente.get();
             inventario.setPrecioVenta(inventarioDTO.getPrecioVenta());
             inventario.setUbicacion(inventarioDTO.getUbicacion());
+            inventario.setCantidad(inventarioDTO.getCantidad());
             inventario.getProducto().setGrupo(inventarioDTO.getProducto().getGrupo());
             inventario.setPrecioVentaBlis(inventarioDTO.getPrecioVentaBlis());
             inventario.setPrecioVentaUnid(inventarioDTO.getPrecioVentaUnid());

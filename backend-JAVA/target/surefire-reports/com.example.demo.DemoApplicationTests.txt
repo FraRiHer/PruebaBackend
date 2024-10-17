@@ -1,9 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.example.demo.DemoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.866 s <<< FAILURE! -- in com.example.demo.DemoApplicationTests
-com.example.demo.DemoApplicationTests.contextLoads -- Time elapsed: 0.042 s <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1832b0f6 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5dafbe45, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@d2de489, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@f58853c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@64b0598, org.springframework.boot.test.context.SpringBootTestAnnotation@52399a98], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+<<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.008 s -- in com.example.demo.DemoApplicationTests
+=======
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.472 s <<< FAILURE! -- in com.example.demo.DemoApplicationTests
+com.example.demo.DemoApplicationTests.contextLoads -- Time elapsed: 0.028 s <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@712594f4 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5dafbe45, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@d2de489, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@f58853c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@64b0598, org.springframework.boot.test.context.SpringBootTestAnnotation@52399a98], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
@@ -22,7 +25,9 @@ java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMerge
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Attempt to resolve foreign key metadata from JDBC metadata failed to find column mappings for foreign key named [FK1t2c3l16y2k8gi13l9ndblgwy]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
@@ -46,23 +51,31 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Attempt to resolve foreign key metadata from JDBC metadata failed to find column mappings for foreign key named [FK1t2c3l16y2k8gi13l9ndblgwy]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
 	... 38 more
-Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Attempt to resolve foreign key metadata from JDBC metadata failed to find column mappings for foreign key named [FK1t2c3l16y2k8gi13l9ndblgwy]
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl$ForeignKeyBuilderImpl.build(AbstractInformationExtractorImpl.java:1383)
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl$ForeignKeyBuilderImpl.build(AbstractInformationExtractorImpl.java:1364)
-	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getForeignKeys(AbstractInformationExtractorImpl.java:1348)
-	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.foreignKeys(TableInformationImpl.java:97)
-	at org.hibernate.tool.schema.extract.internal.TableInformationImpl.getForeignKeys(TableInformationImpl.java:91)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.equivalentForeignKeyExistsInDatabase(AbstractSchemaMigrator.java:483)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.checkForExistingForeignKey(AbstractSchemaMigrator.java:475)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applyForeignKeys(AbstractSchemaMigrator.java:442)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:268)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
 	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286)
 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145)
@@ -77,4 +90,49 @@ Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Attempt to r
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
 	... 42 more
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 63 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 76 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 79 more
+
+>>>>>>> 4c2f6f7ca3eb9891006f006343b72125f36c16f3
