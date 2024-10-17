@@ -30,7 +30,6 @@ public class Factura {
     private Cliente cliente;
 
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "empleado_id", nullable = false)
     private Empleado empleado;
 
